@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+  
+  <div class="container">
+    <div id="welcome-screen" class="screen active animate__animated animate__fadeIn">
+      <h1 class="animate__animated animate__heartBeat animate__infinite">Happy Birthday!</h1>
+      <p class="animate__animated animate__fadeIn animate__delay-1s">To the most amazing person in my life</p>
+      <button id="start-button" class="btn animate__animated animate__bounceIn animate__delay-2s">Start Your Birthday Journey</button>
+    </div>
+
+    <div id="quran-screen" class="screen animate__animated">
+      <h2 class="animate__animated">Beautiful Words from Quran</h2>
+      <div class="quran-container">
+        <div class="quran-verse animate__animated">
+          <p class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</p>
+          <p class="translation">"And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought."</p>
+          <p class="reference">Surah Ar-Rum 30:21</p>
+        </div>
+        <!-- <div class="quran-verse animate__animated">
+          <p class="translation">"The best of you are those who are best to their wives."</p>
+          <p class="reference">Hadith - Tirmidhi</p>
+        </div> -->
+        <!-- <div class="quran-verse animate__animated">
+          <p class="translation">"Paradise lies at the feet of mothers."</p>
+          <p class="reference">Hadith - Ahmad, Nasai</p>
+        </div> -->
+      </div>
+      <button id="quran-next" class="btn animate__animated">Next</button>
+    </div>
+
+    <div id="music-screen" class="screen animate__animated">
+      <h2 class="animate__animated">A Special Song For You</h2>
+      <div class="music-container animate__animated">
+        <div class="music-player">
+          <!-- <audio id="birthday-song" controls>
+             Add your music file URL here 
+            <source src="/Perfect-(Mr-Jat.in).mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio> 
+        -->
+        </div>
+        <p class="music-message">This melody reminds me of you every time I hear it.</p>
+      </div>
+      <button id="music-next" class="btn animate__animated">Next</button>
+    </div>
+
+    <div id="reasons-screen" class="screen animate__animated">
+      <h2 class="animate__animated">Reasons Why I Am Happy Today</h2>
+      <ul id="reasons-list">
+        <li class="animate__animated">Your beautiful smile lights up my world</li>
+        <li class="animate__animated">Your kindness towards everyone you meet</li>
+        <li class="animate__animated">The way you make me laugh even on my worst days</li>
+        <li class="animate__animated">Your passion for the things you love</li>
+        <li class="animate__animated">How you always know what to say to make me feel better</li>
+        <li class="animate__animated">The way your eyes sparkle when you're excited</li>
+        <li class="animate__animated">Your incredible strength and resilience</li>
+      </ul>
+      <button id="reasons-next" class="btn animate__animated">Next</button>
+    </div>
+
+    <div id="wish-screen" class="screen animate__animated">
+      <h2 class="animate__animated">Happy Birthday Rakshinda❤</h2>
+      <div class="wish-content animate__animated">
+        <p>May ALLAH bless you and shower his blessings upon you and your family...
+        </p>
+        <p>May Allah fulfill all of your justified wishes...
+        </p>
+        <p>May you live long, healthy & peaceful life with loads and loads of Happiness, Wealth & prosperity...
+        </p>
+        <p>May Success lay on your feets...
+        </p>
+        <p>May Allah protects you from Evil Eyes ,Bad habits, Bad people & from each & every thing which causes you harm...
+        </p>
+        <p>May Allah bless you with all those which make you closer to him...
+        </p>
+        <p>May Allah make you amongst his close servants...
+        </p>
+        <p>May you get more than you Deserve...
+        </p>
+        <p>Have an Awesome Day, Year, Life ahead...
+        </p>
+        <p>Stay Happy, Stay safe, Stay Blessed...
+        </p>
+        <p class="big-text">In Sha Allah soon💍❤<br></br>Aameen❤</p>
+      </div>
+      <button id="wish-next" class="btn animate__animated">Special Surprise</button>
+    </div>
+
+    <div id="cake-cutting-screen" class="screen animate__animated">
+      <h2 class="animate__animated animate__heartBeat">Cut Your Birthday Cake!</h2>
+      <div class="cake-container">
+        <div class="cake">
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+          <div class="knife"></div>
+        </div>
+      </div>
+      <p class="cake-message animate__animated">Click the button to cut the cake and make a wish!</p>
+      <button id="cake-cutting-button" class="btn animate__animated">Cut The Cake</button>
+      <div id="balloons-container"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="main.js"></script>
+</body>
+</html>

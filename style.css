@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+  width: 100%;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff4b8d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ff4b8d;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: linear-gradient(45deg, #ff4b8d, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 75, 141, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(255, 75, 141, 0.5);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Quran Screen Styles */
+.quran-container {
+  margin: 30px 0;
+}
+
+.quran-verse {
+  background-color: rgba(255, 182, 193, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arabic {
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 15px;
+  font-family: 'Traditional Arabic', serif;
+  direction: rtl;
+}
+
+.translation {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.reference {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Music Screen Styles 
+.music-container {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: rgba(255, 182, 193, 0.2);
+  border-radius: 15px;
+}
+
+.music-player {
+  margin: 20px 0;
+}
+
+.music-player audio {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.music-message {
+  font-style: italic;
+  margin-top: 20px;
+}
+  */
+
+/* Reasons Screen Styles */
+#reasons-list {
+  list-style: none;
+  text-align: left;
+  margin: 30px 0;
+}
+
+#reasons-list li {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: rgba(255, 182, 193, 0.2);
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+#reasons-list li:before {
+  content: "❤️";
+  margin-right: 10px;
+}
+
+/* Wish Screen Styles */
+.wish-content {
+  margin: 30px 0;
+}
+
+.wish-content p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.big-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4b8d;
+  margin-top: 30px;
+}
+
+/* Cake Cutting Screen Styles */
+.cake-container {
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.cake {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to right, #f9c1d5, #ffd1dc);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 0 #e8a1b3;
+}
+
+.cake:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, #ffd1dc, #f9c1d5);
+  top: -20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.candle {
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(to right, #fff, #f0f0f0);
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.flame {
+  width: 15px;
+  height: 30px;
+  background: linear-gradient(to bottom, #ffcc00, #ff9900);
+  border-radius: 50% 50% 20% 20%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 1s infinite alternate;
+  box-shadow: 0 0 20px #ff9900, 0 0 40px #ffcc00;
+}
+
+.knife {
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+  top: 40px;
+  right: -60px;
+  border-radius: 5px 15px 15px 5px;
+  transform: rotate(0deg);
+  transform-origin: left center;
+  transition: transform 1s ease;
+  opacity: 0;
+}
+
+.knife.active {
+  opacity: 1;
+  transform: rotate(30deg);
+}
+
+.cake-message {
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+
+/* Balloon Animation */
+#balloons-container {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 0;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .screen {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .arabic {
+    font-size: 1.2rem;
+  }
+  
+  .translation {
+    font-size: 1rem;
+  }
+}
