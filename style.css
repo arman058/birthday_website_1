@@ -196,6 +196,7 @@ p {
   border-radius: 10px;
   position: relative;
   box-shadow: 0 5px 0 #e8a1b3;
+  top: 100px;
 }
 
 .cake:before {
